@@ -32,7 +32,7 @@ jobs:
           context: .
           file: .back/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nest-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}nest-demo:latest
         
       - 
         name: Build and Push Back
@@ -41,7 +41,7 @@ jobs:
           context: .
           file: .front/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/nest-demo:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}nest-demo:latest
 
       -
         name: Deploy using docker-compose
