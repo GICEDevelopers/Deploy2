@@ -29,13 +29,13 @@ jobs:
         run: |
           docker buildx build --push \
             --file ./back/Dockerfile \
-            --tag ${{ secrets.DOCKER_USERNAME }}/nest-backend:latest .
+            --tag ${{ secrets.DOCKER_USERNAME }}nest-backend:latest .
 
       - name: Build and push frontend image
         run: |
           docker buildx build --push \
             --file ./front/Dockerfile \
-            --tag ${{ secrets.DOCKER_USERNAME }}/next-frontend:latest .
+            --tag ${{ secrets.DOCKER_USERNAME }}next-frontend:latest .
 
 
       - name: Deploy using docker-compose
