@@ -11,23 +11,7 @@ import {
 
 
 export class CreateUserDto {
-  @IsString()
-  @IsNotEmpty()
-  @Length(3, 50)
-  @ApiProperty({
-    description: 'Nombre (hasta 50 caracteres)',
-    example: 'Juan',
-  })
-  name: string;
 
-  @IsString()
-  @IsNotEmpty()
-  @Length(3, 50)
-  @ApiProperty({
-    description: 'Apellido (hasta 50 caracteres)',
-    example: 'Sanchez',
-  })
-  lastname: string;
 
   @IsNotEmpty()
   @IsEmail()
@@ -68,41 +52,11 @@ export class CreateUserDto {
   confirmPassword: string;
 
   @IsNotEmpty()
-  @IsInt()
   @ApiProperty({
     description: 'Agrega tu codigo de área ',
     example: '543511111111',
   })
-  phone: number;
+  phone: string;
 
-  @IsString()
-  @IsNotEmpty()
-  @Length(5, 20)
-  @ApiProperty({
-    description: 'Máximo 20 caracteres',
-    example: 'Inglaterra',
-  })
-  country: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @Length(5, 20)
-  @ApiProperty({
-    description: 'Máximo 20 caracteres',
-    example: 'Londres',
-  })
-  city: string;
-
-  @IsString()
-  @IsNotEmpty()
-  @Length(3, 80)
-  @ApiProperty({
-    description: 'Máximo 80 caracteres',
-    example: 'Calle 123',
-  })
-  address: string;
-
-  @IsOptional()
-  isActive:boolean
  
 }
